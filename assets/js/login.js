@@ -35,15 +35,15 @@ $(function(){
     // 2. 发起Ajax的POST请求
         $.ajax({
             method:'POST',
-            url:'http://api-breakingnews-web.itheima.net/api/reguser',
+            url:'api/reguser',
             data:$(this).serialize(),
             success:function(res){
                 if(res.status != 0){
                     return layer.msg(res.message)
                 }
-                layer.msg('登录成功',{time:1500},function(){
+                layer.msg('注册成功',{time:1500},function(){
                     localStorage.setItem('token',res.token);
-                    location.href = "index.html"
+                    location.href = "login.html"
                 })
             }
         })
@@ -54,7 +54,7 @@ $(function(){
         e.preventDefault();
         $.ajax({
             method:'POST',
-            url:'http://api-breakingnews-web.itheima.net/api/login',
+            url:'api/login',
             data: $(this).serialize(),
             success:function(res){
                 if(res.status != 0){
