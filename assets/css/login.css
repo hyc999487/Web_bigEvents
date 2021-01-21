@@ -1,0 +1,54 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../images/login_bg.jpg') no-repeat center;
+    background-size: cover;
+
+}
+/* 登录注册框 */
+.loginAndRegBox{
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.title-box {
+    height: 60px;
+    background: url('../../assets/images/login_title.png') no-repeat center;
+}
+/* 注册框 */
+.reg-box{
+    display: none;
+}
+/* 登录页面的表单 */
+.layui-form {
+    padding: 0 30px;
+}
+/* 注册链接的盒子 */
+.links{
+    display: flex;
+    justify-content: flex-end;
+}
+/* 注册链接里面的a链接 */
+.links a{
+    font-size: 12px;
+}
+/* 登录页面的用户名和密码框 */
+.layui-form-item{
+    position: relative;
+}
+/* 文本框的字体图标 */
+.layui-icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.layui-input{
+    padding-left: 32px;
+}
