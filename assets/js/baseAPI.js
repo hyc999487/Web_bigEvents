@@ -1,6 +1,6 @@
 // 在执行Ajax请求前，会先执行ajaxPrefilter这个函数，option获取ajax请求的所有配置项
 $.ajaxPrefilter(function(option){
-    console.log(option);
+    // console.log(option);
     option.url = 'http://api-breakingnews-web.itheima.net/' + option.url
 
     // 统一为有权限的接口，设置请求头headers

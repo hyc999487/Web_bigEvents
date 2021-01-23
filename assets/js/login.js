@@ -10,7 +10,9 @@ $(function(){
         $('.login-box').show();
     })
     // 验证密码框
+    // 从layui中获取form对象
     var form = layui.form;
+    // 通过form.vaerfy({})函数自定义校验规则
     form.verify({
         // 自定义一个pwd的校验规则
         pwd:[/^[\S]{6,12}$/,'密码必须为6-12位，且不能出现空格'],
@@ -29,13 +31,14 @@ $(function(){
     })
     // 监听注册表单的提交事件 http://api-breakingnews-web.itheima.net/
     // 监听注册表单的提交事件
-    $('#form_reg').on('submit', function(e) {
+    $('#form_reg').on('submit', function(e) { 
     // 1. 阻止默认的提交行为
         e.preventDefault()
     // 2. 发起Ajax的POST请求
         $.ajax({
             method:'POST',
             url:'api/reguser',
+            // 快速获取表单中的数据
             data:$(this).serialize(),
             success:function(res){
                 if(res.status != 0){
